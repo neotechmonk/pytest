@@ -1,6 +1,1 @@
 pytest
-yfinance
-mplfinance
-pandas
-numpy
-matplotlib
