@@ -1,4 +1,14 @@
-# pytest
-Demo of using pytest for unit testing in a dockerized environment 
+#pytest
+Demo using pytest for unit testing
 
-Created following the course on [LinkedIn Learning](https://www.linkedin.com/learning-login/share?forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Funit-testing-in-python%3Ftrk%3Dshare_ent_url%26shareId%3Di7vmG9EtTreBplpc%252B7BSJg%253D%253D)
+Created following the course on LinkedIn Learning
+
+### Concepts
+1. Basic Assertions
+1. Exceptions
+1. Happy vs Sad paths
+1. Fixtures
+1. Parametrization
+1. conftest.py to centralise fixtures
+1. Modularise conftest.py and import submodules into conftest.py
+1.Verify test coverage
