@@ -7,5 +7,5 @@ from src.person import Person
 
 
 def test_full_name():
-    p1 = Person("Adam", "Sanders")
+    p1 = Person("Adam", "Sanders", 34)
     assert p1.get_full_name() == "Adam Sanders"
