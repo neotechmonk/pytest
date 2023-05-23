@@ -24,3 +24,13 @@ def test_headers(read_csv_data):
     header = list(data[0].keys())
     assert header == ['FirstName', 'LastName', 'Age']
 
+def test_check_first_and_last_row(read_csv_data):
+    data =  read_csv_data
+
+    # Last record
+    assert list(data[-1].values()) == ['Kevin', 'King', 21]
+
+    # First record
+    assert list(data[0].values()) == ['John', 'Doe', 25]
+
+
