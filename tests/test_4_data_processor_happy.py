@@ -15,9 +15,9 @@ def read_csv_data(csv_filelocation):
     yield proces_csv_data(csv_filelocation)
      
 
-def test_csv_file_reads(read_csv_data):
+def test_row_count(read_csv_data):
     data =  read_csv_data
-    assert len(data) > 0
+    assert len(data) ==29 #30 with headers
 
 def test_headers(read_csv_data):
     data =  read_csv_data
