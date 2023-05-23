@@ -33,10 +33,16 @@ def test_contents(read_csv_data):
     # First record
     assert list(data[0].values()) == ['John', 'Doe', 25]
 
+    # Random data check 
+    assert data[10]['FirstName'] == 'Daniel'
+    assert data[19]['LastName'] == 'Adams'
+
     # type check
     for row in data:
         assert isinstance(row['FirstName'], str)
         assert isinstance(row['LastName'], str)
         assert isinstance(row['Age'], int)
+
+ 
 
 
