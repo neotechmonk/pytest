@@ -24,7 +24,7 @@ def test_headers(read_csv_data):
     header = list(data[0].keys())
     assert header == ['FirstName', 'LastName', 'Age']
 
-def test_check_first_and_last_row(read_csv_data):
+def test_contents(read_csv_data):
     data =  read_csv_data
 
     # Last record
@@ -32,5 +32,11 @@ def test_check_first_and_last_row(read_csv_data):
 
     # First record
     assert list(data[0].values()) == ['John', 'Doe', 25]
+
+    # type check
+    for row in data:
+        assert isinstance(row['FirstName'], str)
+        assert isinstance(row['LastName'], str)
+        assert isinstance(row['Age'], int)
 
 
