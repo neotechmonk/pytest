@@ -16,6 +16,6 @@ def proces_csv_data(file_location):
         return data
 
 
-def json_reader(file_location):
+def proces_json_data(file_location):
     with open(file_location) as f:
         return json.load(f)
