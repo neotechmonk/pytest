@@ -16,6 +16,19 @@ def proces_csv_data(file_location):
         return data
 
 
+import json
+
+
 def proces_json_data(file_location):
-    with open(file_location) as f:
-        return json.load(f)
+    with open(file_location) as json_file:
+        data = json.load(json_file)
+        for item in data:
+            try:
+                item["FirstName"] = str(item["FirstName"])
+                item["LastName"] = str(item["LastName"])
+                item["Age"] = int(item["Age"])
+            except Exception as exp:
+                raise ValueError('Invalid input: ' + str(exp))
+
+        return data
+
