@@ -18,3 +18,9 @@ def read_csv_data(csv_filelocation):
 def test_csv_file_reads(read_csv_data):
     data =  read_csv_data
     assert len(data) > 0
+
+def test_headers(read_csv_data):
+    data =  read_csv_data
+    header = list(data[0].keys())
+    assert header == ['FirstName', 'LastName', 'Age']
+
